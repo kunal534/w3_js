@@ -1,0 +1,27 @@
+<!-- 
+ 
+Here i have attached the funciton with paranthesis which means i am explicitly calling the function
+due to which when we click the button the print option comes in that moment
+
+but if i haven't used paranthesis then it would mean passing the value by reference which are used in even handler 
+such as settimeout(fun_name,2000) 
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Print Window
+    </title>
+</head>
+<body>
+    <p>make the print page function</p>
+    <button onclick="print_func()">click me</button>
+    <script>
+        function print_func(){
+            window.print();
+        }
+        </script>
+</body>
+
+</html>
