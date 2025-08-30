@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>basic cal</title>
+        <script>
+        function multi() {
+            // getting element by id
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("Result").innerHTML = num1 * num2;
+        }
+
+        function div() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {// if entered 0 as denominator
+                document.getElementById("Result").innerHTML = "Cannot divide by zero.";
+                return;
+            }
+            document.getElementById("Result").innerHTML = num1 / num2;
+        }
+        </script>
+    </head>
+    <body> 
+        <form>
+            1'st number: <input type="text" id="num1"/><br>
+            2'nd number: <input type="text" id="num2"/><br>
+            <!--  On click action -->
+                <button type="button" onclick="multi()">Multiply</button>
+                <button type="button" onclick="div()">Divide</button>
+        </form>
+        <p>
+            The Result is:<br>
+            <span id="Result"></span>
+        </p>
+    </body>
+</html>
